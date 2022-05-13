@@ -14,6 +14,10 @@ html, body {
   overflow-x: hidden;
 }
 
+body {
+  background-color: #262626;
+}
+
 
 
 /* Background video */
@@ -35,15 +39,19 @@ video {
 }
 
 @media only screen and (min-width: 992px){
+
   #small-video {
     display: none;
   }
+
 }
 
 @media only screen and (max-width: 992px){
+
   #big-video {
     display: none;
   }
+
 }
 
 
@@ -56,9 +64,11 @@ nav {
 }
 
 @media only screen and (max-width: 991px){
+
   nav {
     display: none;
   }
+
 }
 
 nav ul {
@@ -89,26 +99,51 @@ section {
   min-height: 100%;
 
   overflow: auto;
+  backdrop-filter: brightness(50%);
 }
 
 
 
 /* Main page */
 
-main {
-  width: 40%;
-  margin: 250px 10%;
+@media only screen and (min-width: 992px){
 
-  color: #fff;
+  main {
+    width: 40%;
+    margin: 250px 10%;
+  
+    color: #fff;
+  }
+  
+  main h1 {
+    font-size: 50px;
+  }
+
 }
 
-main h1 {
-  display: inline-block;
-  font-size: 50px;
+@media only screen and (max-width: 991px){
+
+  main {
+    width: 80%;
+    margin: 250px auto;
+
+    color: #fff;
+    text-align: center;
+  }
+
+  main h1 {
+    font-size: 7vw;
+  }
+
+  main p {
+    margin-top: 15px;
+    font-size: calc(1.5vw + 5px);
+  }
+
 }
 
 
-/* Animation */
+/* Animation classes */
 
 .typewriter {
   display: inline-block;
@@ -126,6 +161,25 @@ main h1 {
   overflow: hidden;
 }
 
+.dissolve {
+  animation: dissolve 5s forwards;
+}
+
+.move-up {
+  transition: transform 0.2s;
+}
+
+.move-up:hover {
+  transition: transform 0.2s;
+  transform: translateY(-5px);
+
+  height: calc(100% + 5px);
+}
+
+
+
+/* Animation keyframes */
+
 @keyframes typing {
   0% { width: 0%; padding-right: 0; }
   50% { width: 100%; padding-right: 10px; }
@@ -134,4 +188,9 @@ main h1 {
 @keyframes border-blink {
   0% { border-color: transparent; }
   50% { border-color: rgb(154, 107, 60)}
+}
+
+@keyframes dissolve {
+  from {opacity: 0%;};
+  to {opacity: 100%};
 }
