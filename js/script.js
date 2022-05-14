@@ -6,4 +6,12 @@ function loaded(){
   }
 }
 
+function show_navbar(){
+  document.getElementById("side-nav").classList.add("translate-x");
+}
+
+function hide_navbar(){
+  document.getElementById("side-nav").classList.remove("translate-x");
+}
+
 window.onload = loaded;

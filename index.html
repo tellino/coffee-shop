@@ -23,20 +23,33 @@
 
     <section>
       
-      <nav>
+      <nav id="big-nav">
         <ul>
-          <a href="#"><li class="move-up">Home</li></a>
-          <a href="#"><li class="move-up">About</li></a>
-          <a href="#"><li class="move-up">Product</li></a>
-          <a href="#"><li class="move-up">Contact</li></a>
+          <li class="move-up"><a href="#">Home</a></li>
+          <li class="move-up"><a href="#">About</a></li>
+          <li class="move-up"><a href="#">Product</a></li>
+          <li class="move-up"><a href="#">Contact</a></li>
         </ul>
       </nav>
 
-      <span class="nav-opener">
-        <span class="opener-line"></span>
-        <span class="opener-line"></span>
-        <span class="opener-line"></span>
+      <span class="nav-opener" onclick="javascript: show_navbar()">
+        <span class="white-line"></span>
+        <span class="white-line"></span>
+        <span class="white-line"></span>
       </span>
+
+      <nav id="side-nav">
+        <span id="close-btn" onclick="javascript: hide_navbar()">
+          <div class="white-line rotate forward"></div>
+          <div class="white-line rotate backward"></div>
+        </span>
+        <ul>
+          <li class="nav-element"><a href="#">Home</a></li>
+          <li class="nav-element"><a href="#">About</a></li>
+          <li class="nav-element"><a href="#">Product</a></li>
+          <li class="nav-element"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
 
       <main>
         <div class="typewriter">

@@ -5,13 +5,16 @@
 
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
+
+  text-decoration: none;
+  list-style: none;
+
+  overflow-x: hidden !important;
 }
 
 html, body {
   height: 100vh;
   width: 100vw;
-
-  overflow-x: hidden;
 }
 
 body {
@@ -58,14 +61,16 @@ video {
 
 /* Navigation bar */
 
-nav {
+#big-nav {
   width: 35%;
   margin: 50px 100px auto auto;
+
+  display: block;
 }
 
 @media only screen and (max-width: 991px){
 
-  nav {
+  #big-nav {
     display: none;
   }
 
@@ -81,13 +86,13 @@ nav {
     display: none;
   }
 
-  nav {
-    display: block;
+  #side-nav {
+    display: none !important;
   }
 
 }
 
-nav ul {
+#big-nav ul {
   display: flex;
   justify-content: space-between;
 
@@ -95,14 +100,14 @@ nav ul {
   list-style: none;
 }
 
-nav ul a {
+#big-nav ul a {
   text-decoration: none;
   color: #fff;
 
   transition: 0.5s;
 }
 
-nav ul a:hover {
+#big-nav ul a:hover {
   color: rgb(187, 187, 187);
 }
 
@@ -117,20 +122,88 @@ nav ul a:hover {
 
   flex-direction: column;
   justify-content: center;
+
+  cursor: pointer;
 }
 
-.opener-line {
+.white-line {
   display: block;
   box-sizing: border-box;
 
   width: 65%;
-  height: 7.5%;
+  height: 1vw;
 
   margin: 0.6vw auto;
 
   border-radius: 5px;
   background-color: #fff;
 }
+
+.rotate {
+  position: absolute;
+  transform-origin: center;
+
+  height: 0.75vw;
+  width: 5vw;
+}
+
+.forward {
+  transform: rotate(-45deg);
+}
+
+.backward {
+  transform: rotate(45deg);
+}
+
+#side-nav {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: calc(20% + 150px);
+  height: 100%;
+
+  background-color: #262626;
+  z-index: 2;
+
+  transform: translateX(100%);
+  transition: 1.5s;
+}
+
+#close-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: calc(5vw);
+  height: calc(5vw);
+
+  margin: 20px 20px 0 auto;
+}
+
+#close-btn:hover .rotate{
+  background-color: rgb(187, 187, 187);
+}
+
+#side-nav ul {
+  height: 35%;
+  margin-top: 20%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.nav-element {
+  text-align: center;
+}
+
+.nav-element a {
+  color: #fff;
+  display: inline-block;
+}
+
 
 
 /* Section */
@@ -215,6 +288,10 @@ section {
   transform: translateY(-5px);
 
   height: calc(100% + 5px);
+}
+
+.translate-x {
+  transform: translateX(0px) !important;
 }
 
 
