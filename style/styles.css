@@ -70,7 +70,7 @@ nav {
   }
 
   .nav-opener {
-    display: flex;
+    display: none;
   }
 
 }
