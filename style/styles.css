@@ -71,6 +71,14 @@ nav {
 
 }
 
+@media only screen and (min-width: 992px){
+
+  .nav-opener {
+    display: none;
+  }
+
+}
+
 nav ul {
   display: flex;
   justify-content: space-between;
@@ -88,6 +96,38 @@ nav ul a {
 
 nav ul a:hover {
   color: rgb(187, 187, 187);
+}
+
+.nav-opener {
+  display: block;
+
+  height: 7.5vw;
+  width: 7.5vw;
+
+  background-color: rgb(58, 58, 58);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.opener-line {
+  display: block;
+
+  width: 80%;
+  height: 5%;
+
+  background-color: #fff;
+}
+
+.opener-line::after,
+.opener-line::before {
+  display: block;
+
+  content: "";
+
+  height: 100%;
+  width: 100%;
 }
 
 
