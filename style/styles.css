@@ -69,12 +69,20 @@ nav {
     display: none;
   }
 
+  .nav-opener {
+    display: flex;
+  }
+
 }
 
 @media only screen and (min-width: 992px){
 
   .nav-opener {
     display: none;
+  }
+
+  nav {
+    display: block;
   }
 
 }
@@ -99,14 +107,11 @@ nav ul a:hover {
 }
 
 .nav-opener {
-  display: block;
-
   height: 7.5vw;
   width: 7.5vw;
 
   background-color: rgb(58, 58, 58);
 
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
